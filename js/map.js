@@ -103,8 +103,13 @@
         $('iframe').load(function(){
             $(this).contents().find("body").on('click', function(event) {
                 $('#charts_frame').hide();
-                $('#charts2_frame').css('visibility', 'visible');
+                $('#charts_modal').css('visibility', 'visible');
             });
+        });
+
+        $('#charts_modal').on('click', function() {
+            $('#charts_frame').show();
+            $('#charts_modal').css('visibility', 'hidden');
         });
 
     });
