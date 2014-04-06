@@ -183,3 +183,21 @@ aside .body a {
     font-weight: bold;
     cursor: pointer;
 }
+
+#refs {
+
+}
+
+#refs {
+    text-align: center;
+}
+#refs h1 {
+    margin-bottom: 10px;
+}
+#refs a {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+}
