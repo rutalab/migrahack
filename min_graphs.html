@@ -1,0 +1,176 @@
+<!DOCTYPE>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <script src="js/d3.js"></script>
+        <script src="js/topojson.v1.min.js"></script>
+        <script src="js/datamaps.all.js"></script>
+        <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+        <script type="text/javascript" src="js/globalize.js"></script>
+        <script type="text/javascript" src="js/dx.chartjs.js"></script>
+    </head>
+
+    <body>
+
+        <div id="charts">
+
+            <div id="chartContainer" style="max-width:150px;height:150px;"></div>
+            <div id="pieChartContainer" style="max-width:150px;height:150px;"></div>
+            <div id="chartRetenidosMexMin" style="height:150px; max-width:150px;"></div>
+
+        </div>
+
+        <script>
+
+                    $(function () {
+                        var dataSource = [
+                        { year: '2005', total: 433, retenidosMex: 226.5, retenidosUSA: 123, llegan: 83.5},
+                        { year: '2006', total: 333, retenidosMex: 179.6, retenidosUSA: 71.7, llegan: 81.7},
+                        { year: '2007', total: 211, retenidosMex: 113.4, retenidosUSA: 47.5, llegan: 50.1},
+                        { year: '2008', total: 171, retenidosMex: 88.6, retenidosUSA: 47, llegan: 35.4},
+                        { year: '2009', total: 134, retenidosMex: 65, retenidosUSA: 37.4, llegan: 31.6},
+                        { year: '2010', total: 140, retenidosMex: 64.5, retenidosUSA: 40.9, llegan: 34.6}
+                    ];
+
+                    var myPalette = ['rgb(30, 144, 255)', 'rgb(255, 105, 180)'];
+                    DevExpress.viz.core.registerPalette('mySuperPalette', myPalette);
+
+                    $("#chartContainer").dxChart({
+                        dataSource: dataSource,
+                        commonSeriesSettings: {
+                            argumentField: 'year',
+                            type: 'bar',
+                            label: {
+                                visible: false,
+                                format: "fixedPoint",
+                                precision: 0
+                            }
+                        },
+                        argumentAxis: { label: {visible: false }},
+                        size: {
+                            width: 150,
+                            height: 150
+                        },
+                        series: [
+                            { valueField: 'total', name: 'Total' },
+                            { valueField: 'retenidosMex', name: 'Retenidos en México' },
+                            { valueField: 'retenidosUSA', name: 'Retenidos en EEUU' },
+                            { valueField: 'llegan', name: 'Llegan a EEUU' }
+                        ],
+                        tooltip: {
+                            enabled: true
+                        },
+                        palette: 'mySuperPalette',
+                        legend: {
+                            visible: false,
+                            verticalAlignment: 'bottom',
+                            horizontalAlignment: 'center',
+                            font: {
+                                size: 18
+                            }
+                        },
+                        title: {
+                            text: 'Migrantes provenientes de Centroamérica (miles)'
+                        }
+                    });
+                    
+                var pieChartDataSource = [
+                    {category: 'Honduras', value: .443},
+                    {category: 'Salvador', value: .162},
+                    {category: 'Guatemala', value: .112},
+                    {category: 'México', value: .106},
+                    {category: 'Cuba', value: .05},
+                    {category: 'Nicaragua', value: .044},
+                    {category: 'Otros', value: .021},
+                    {category: 'Desconocidos', value: .062}
+                    
+                ];
+                
+                var myPalette = ['rgb(199, 21, 133)', 'rgb(100, 149, 237)', 'rgb(34, 139, 34)', 'rgb(250, 128, 114)', 'rgb(255, 69, 0)', 'rgb(176, 224, 230)'];
+                DevExpress.viz.core.registerPalette('mySuperPalette', myPalette);
+
+                    $("#pieChartContainer").dxPieChart({
+                        dataSource: pieChartDataSource,
+                        series: {
+                            argumentField: 'category',
+                            valueField: 'value',
+                            type: 'doughnut',
+                            label: {
+                                visible: false,
+                                connector: { visible: true },
+                                format: 'percent',
+                                precision: 1
+                            }
+                        },
+                        tooltip: {
+                            enabled: true,
+                            percentPrecision: 2,
+                            customizeText: function (value) {
+                                return value.percentText;
+                            }
+                        },
+                        size: {
+                            width: 150,
+                            height: 150
+                        },
+                        title: {
+                            text: 'Porcentaje de Secuestros por País de Origen'
+                        },
+                        palette: 'mySuperPalette',
+                        legend: {
+                            visible: false,
+                            horizontalAlignment: 'center',
+                            verticalAlignment: 'bottom',
+                            font: {
+                                size: 18
+                            }
+                        }                       
+                    });
+
+                var dataSource = [
+                    { year: 2005, total: 433, retenidos: 226.5 },
+                    { year: 2006, total: 333, retenidos: 179.6 },
+                    { year: 2007, total: 211, retenidos: 113.4 },
+                    { year: 2008, total: 172, retenidos: 88.6 },
+                    { year: 2009, total: 134, retenidos: 65 },
+                    { year: 2010, total: 140, retenidos: 64.5 }
+                ];
+
+                    $("#chartRetenidosMexMin").dxChart({
+                        dataSource: dataSource,
+                        commonSeriesSettings: {
+                            argumentField: 'year',
+                            label: {
+                                visible: false
+                            }
+                        },
+                        series: [
+                            { valueField: 'total', name: 'Total' },
+                            { valueField: 'retenidos', name: 'Retenidos' }
+                        ],
+                        tooltip: {
+                            enabled: false
+                        },
+                        size: {
+                            height: 150,
+                            width: 150
+                        },
+                        legend: {
+                            visible: false,
+                        },
+                        title: {
+                            text: 'Migrantes Retenidos en México'
+                        },
+                        argumentAxis: { label: {visible: false }}
+                    });
+            
+
+});
+</script>
+
+    </body>
+
+</html>

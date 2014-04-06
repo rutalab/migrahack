@@ -1,0 +1,162 @@
+body {
+    background: #2A2B2E;
+    font-family: "HelveticaNeue";
+}
+html,
+body {
+    /*overflow: hidden;*/
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.datamaps-subunits path {
+    fill: #272727 !important;
+    stroke: #5A5A5A !important;
+}
+.datamaps-subunits path {
+    fill: #1E1F24 !important;
+    stroke: #26272A !important;
+    stroke-width: 1px !important;
+}
+h1 {
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    font-style: italic;
+    color: #82ADB8;
+    margin: 0;
+    z-index: 99;
+}
+h1.header {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+aside {
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 30%;
+    padding: 0px;
+    color: #636975;
+    overflow: hidden;
+    font-family: Georgia;
+    visibility: hidden;
+    opacity: 0;
+}
+aside .header {
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+}
+aside .header:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background-image: url('http://fuga.com.mx/09/wp-content/uploads/2010/10/Ruta-del-migrante-diciembre08-122.jpg');
+  width: 100%;
+  height: 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  -webkit-filter: grayscale(100%);
+}
+aside .header h1 {
+    margin: 30px;
+    color: #BECACE;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+aside img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0px;
+    opacity: 0.5;
+    -webkit-filter: grayscale(100%);
+}
+aside p {
+    padding-bottom: 15px;
+    font-size: 13px;
+    line-height: 21px;
+}
+aside .body {
+    padding: 30px;
+}
+
+#charts {
+    background: rgba(0, 0, 0, 0.3);
+    /*position: fixed;*/
+    padding: 20px;
+    /*right: 20px;*/
+    /*bottom: 20px;*/
+    height: 150px;
+}
+
+#charts > div {
+    float: left;
+    margin-right: 25px;
+}
+#charts > div:last-child {
+    margin-right: 0;
+}
+
+#charts text {
+    font-size: 11px !important;
+    fill: white !important;
+    font-family: Georgia !important;
+}
+
+#charts_frame iframe {
+    width: 540px;
+    height: 190px;
+    border: none;
+}
+#charts_frame {    
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+}
+
+#charts2_frame {
+    visibility: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    opacity: 0.9;
+}
+#charts2_frame iframe {
+    width: 100%;
+    height: 100%;
+}
+#charts2 {
+    padding: 80px;
+}
+
+#charts2 > div {
+    margin-bottom: 50px;
+}
+#charts2 text {
+    /*font-size: 18px !important;*/
+    /*fill: white !important;*/
+    /*font-family: Georgia !important;*/
+}
+
+#charts2 .dxc-legend text {
+    font-size: 12px !important;
+    fill: white !important;
+    font-family: Georgia !important;
+}
+#charts2 .dxc-title text {
+    font-size: 20px !important;
+    fill: white !important;
+    font-family: Georgia !important;
+}
