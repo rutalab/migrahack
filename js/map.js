@@ -54,7 +54,7 @@
 
     function onBubbleClick(d) {
 
-        if(mapState === 'open' && d === currentBubble) {
+        if(mapState === 'open' && d === currentBubble || d.type && d.type === 'route') {
             return;
         }
 
@@ -103,11 +103,17 @@
         $('iframe').load(function(){
             $(this).contents().find("body").on('click', function(event) {
                 $('#charts_frame').hide();
-                $('#charts2_frame').css('visibility', 'visible');
+                $('#charts_modal').css('visibility', 'visible');
             });
         });
 
+        $('#charts_modal').on('click', function() {
+            $('#charts_frame').show();
+            $('#charts_modal').css('visibility', 'hidden');
+        });
+
     });
+
 
     window.map = map;
 
