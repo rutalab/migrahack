@@ -130,6 +130,38 @@
             }
         ]
     },
+    { "name": "Jorge, 39, El Salvador", "radius": 5, "latitude": 13.706155, "longitude": -89.212291, "quote": "Caminé 11 días huyendo de lo que son policías, ladrones, militares y migración.", "source": "http://pasolibrefm4.blogspot.mx/2010/06/la-historia-de-un-migrante.html", "body": "Olga Marina, 25, Honduras", "jumps": [ { "origin": { "latitude": 13.706155, "longitude": -89.212291 }, "destination": { "latitude": 14.67833, "longitude": -92.140017 } }, { "origin": { "latitude": 14.67833, "longitude": -92.140017 }, "destination": { "latitude": 16.23401, "longitude": -93.897847 } }, { "origin": { "latitude": 16.23401, "longitude": -93.897847 }, "destination": { "latitude": 16.87914, "longitude": -95.036036 } }, { "origin": { "latitude": 16.87914, "longitude": -95.036036 }, "destination": { "latitude": 18.447768, "longitude": -96.356236 } }, { "origin": { "latitude": 18.447768, "longitude": -96.356236 }, "destination": { "latitude": 22.216227, "longitude": -100.124302 } }, { "origin": { "latitude": 22.216227, "longitude": -100.124302 }, "destination": { "latitude": 20.685114, "longitude": -103.426565 } } ] },
+    {
+        "name": "Testimonio 8",
+        "radius": 5,
+        "latitude": 15.356932,
+        "longitude": -87.647591,
+        "quote": "Trabajo en Car Wash, ahí encontró al coyote que lo iba a cruzar a Arizona. El coyote lo entregó a otras personas, quienes lo secuestraron, logró escapar cuando lo dejaron al cuidado de uno",
+        "source": "http://www.cndh.org.mx/sites/all/fuentes/documentos/informes/especiales/2011_secmigrantes_0.pdf",
+        "body": "Testimonio 8, 21, Honduras",
+        "jumps": [
+            {
+                "destination": {
+                    "latitude": 32.626063,
+                    "longitude": -115.457162
+                },
+                "origin": {
+                    "latitude": 15.356932,
+                    "longitude": -87.647591
+                }
+            },
+            {
+                "origin": {
+                    "latitude": 20.673792,
+                    "longitude": -103.3354131
+                },
+                "destination": {
+                    "latitude": 20.519102,
+                    "longitude": -103.178561
+                }
+            }
+        ]
+    },
     {
         "name": "Olga Marina",
         "radius": 5,
