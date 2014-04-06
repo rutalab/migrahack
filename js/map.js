@@ -54,7 +54,7 @@
 
     function onBubbleClick(d) {
 
-        if(mapState === 'open' && d === currentBubble) {
+        if(mapState === 'open' && d === currentBubble || d.type && d.type === 'route') {
             return;
         }
 
@@ -113,6 +113,7 @@
         });
 
     });
+
 
     window.map = map;
 

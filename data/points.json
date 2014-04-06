@@ -160,5 +160,84 @@
                 }
             }
         ]
+    },
+    {
+        "name": "Olga Marina",
+        "radius": 5,
+        "latitude": 15.49279,
+        "longitude": -88.026619,
+        "quote": "La gente de México es muy buena y siempre me ha apoyado. Los malos son los policías, las autoridades, la gente rica, ni en sueños que me dejen entrar a una tienda de esas grandes.",
+        "source": "http://www.proyectodiez.mx/2012/04/06/la-historia-de-olga-marina-mujer-centroamericana-en-guadalajara/9218",
+        "body": "Olga Marina, 25, Honduras",
+        "jumps": [
+            {
+                "destination": {
+                    "latitude": 20.673792,
+                    "longitude": -103.3354131
+                },
+                "origin": {
+                    "latitude": 15.49279,
+                    "longitude": -88.026619
+                }
+            },
+            {
+                "origin": {
+                    "latitude": 20.673792,
+                    "longitude": -103.3354131
+                },
+                "destination": {
+                    "latitude": 20.519102,
+                    "longitude": -103.178561
+                }
+            }
+        ]
+    },
+    {
+        "name": "Tijuana",
+        "radius": 10,
+        "color": "rgba(255, 255, 255, 0.5)",
+        "latitude": 32.515257,
+        "longitude": -117.031715,
+        "type": "route"
+    },
+    {
+        "name": "Nueva York",
+        "radius": 10,
+        "color": "rgba(255, 255, 255, 0.5)",
+        "latitude": 34.050657,
+        "longitude": -118.246251,
+        "type": "route"
+    },
+    {
+        "name": "Florida",
+        "radius": 10,
+        "color": "rgba(255, 255, 255, 0.5)",
+        "latitude": 27.689124,
+        "longitude": -81.586312,
+        "type": "route"
+    },
+    {
+        "name": "Chicago",
+        "radius": 10,
+        "color": "rgba(255, 255, 255, 0.5)",
+        "latitude": 41.876699,
+        "longitude": -87.630774,
+        "type": "route"
+    },
+    {
+        "name": "San Francisco",
+        "radius": 10,
+        "color": "rgba(255, 255, 255, 0.5)",
+        "latitude": 37.774391,
+        "longitude": -122.413739,
+        "type": "route"
+    },
+    {
+        "name": "Illinois",
+        "radius": 10,
+        "color": "rgba(255, 255, 255, 0.5)",
+        "latitude": 40.216477,
+        "longitude": -89.234343,
+        "type": "route"
     }
 ]

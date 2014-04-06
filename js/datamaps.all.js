@@ -376,6 +376,9 @@
         .style('stroke-width', options.borderWidth)
         .style('fill-opacity', options.fillOpacity)
         .style('fill', function ( datum ) {
+            if(datum.color) {
+                return datum.color;
+            }
           var fillColor = fillData[ datum.fillKey ];
           return fillColor || fillData.defaultFill;
         })
