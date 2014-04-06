@@ -65,6 +65,9 @@
         sidebar.select('h1 span').text(d.quote);
         sidebar.select('.body b').text(d.body);
 
+        console.log(d.fuente);
+        sidebar.select('.body a').attr('href', d.source);
+
         sidebar.style('visibility', 'visible')
             .transition()
             .duration(250)

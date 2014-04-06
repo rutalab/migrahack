@@ -17,7 +17,7 @@ body {
 .datamaps-subunits path {
     fill: #1E1F24 !important;
     stroke: #26272A !important;
-    stroke-width: 1px !important;
+    stroke-width: 2px !important;
 }
 h1 {
     font-size: 15px;
@@ -89,6 +89,12 @@ aside .body {
     padding: 30px;
 }
 
+aside .body a {
+    color: inherit;
+    text-decoration: none;
+    font-style: italic;
+    border-bottom: 1px dotted;
+}
 #charts {
     background: rgba(0, 0, 0, 0.3);
     /*position: fixed;*/
